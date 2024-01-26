@@ -1,0 +1,159 @@
+#include <iostream>
+
+using namespace std;
+struct student{
+    string name;
+    int marks[4] = {10,0,30,40};
+    int average;
+    char grade;
+
+};
+void addstudents(){
+    cout<<"Enter student name :"<<endl;
+
+
+}
+void printStud(){
+    student stud;
+    stud.name = "Abdullah";
+    stud.average = 25;
+    stud.grade = 'F';
+    cout<<stud.name<<" "<<stud.average<<" "<<stud.grade<<endl;
+}
+int main(){
+    printStud();
+    return 0;
+        
+}
+................................
+#include <iostream>
+
+using namespace std;
+struct student{
+    string name;
+    int marks[4] = {10,0,30,40};
+    int average;
+    char grade;
+
+};
+void addstudents(){
+    cout<<"Enter student name :"<<endl;
+
+
+}
+void printStud(student stud){
+    cout<<stud.name<<" "<<stud.average<<" "<<stud.grade<<endl;
+}
+int main(){
+
+    
+    student stud;
+    stud.name = "Abdullah";
+    stud.average = 25;
+    stud.grade = 'F';
+
+    printStud(stud);
+    return 0;
+        
+}
+.......................................
+#include <iostream>
+
+using namespace std;
+struct student{
+    string name;
+    int marks[4] = {10,0,30,40};
+    int average;
+    char grade;
+
+};
+void addstudents(){
+    cout<<"Enter student name :"<<endl;
+
+
+}
+void printStud(student stud){
+    cout<<stud.name<<" "<<stud.average<<" "<<stud.grade<<endl;
+}
+int main(){
+
+    int sum = 0;
+    int avg;
+    student stud;
+    
+    for(int i =0;i<4;i++){
+        int degree;
+        cout<<"Enter Your "<<i<<"st degree :"<<endl;
+        cin>>stud.marks[i];
+        sum = sum + stud.marks[i];
+    }
+
+    avg = sum/4;
+    stud.name = "Abdullah";
+    stud.average = avg;
+    stud.grade = 'F';
+
+    printStud(stud);
+    return 0;
+        
+}
+...............................................................
+#include <iostream>
+
+using namespace std;
+struct student{
+    string name;
+    int marks[4] = {10,0,30,40};
+    int average;
+    char grade;
+
+};
+
+void printStud(student stud){
+    cout<<stud.name<<" "<<stud.average<<" "<<stud.grade<<endl;
+}
+int main(){
+
+    int sum = 0;
+    int avg;
+    student stud;
+    student slist[4];
+    
+    for(int i = 0;i<4;i++){
+        cout<<"Enter name :"<<endl;
+        cin>>stud.name;
+        sum = 0;
+        for(int i =0;i<4;i++){
+        cout<<"Enter "<<i<<"st degree :"<<endl;
+        cin>>stud.marks[i];
+        sum = sum + stud.marks[i];
+        }
+
+        avg = sum/4;
+        stud.average = avg;
+        if(avg > 100 or avg <0){
+            cout<<"Not valid"<<endl;
+        }else{
+            if(avg > 85){
+                stud.grade = 'A';
+            }else if(avg > 75){
+                stud.grade = 'B';
+            }else if(avg > 65){
+                stud.grade = 'C';
+            }else if(avg > 60){
+                stud.grade = 'D';
+            }else{
+                stud.grade = 'F';
+            }
+        }
+        slist[i] = stud;
+
+    }
+    for(int i = 0; i<4;i++){
+        cout<<slist[i].name<<"  "<<slist[i].average<<slist[i].grade<<endl;
+    }
+    
+    return 0;
+        
+}
+......................................................................................
